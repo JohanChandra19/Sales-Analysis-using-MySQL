@@ -51,7 +51,6 @@ group by Customer_name
 order by Order_count desc;
 
 -- Q11: rank 5 products based on total sales using rank() --
--- 4types of ranking funtion 1)row 2)rank 3)dense rank 4)entile --
 select Product_name, sum(Total_Amount) as Total_Sales,
 rank() over (order by sum(Total_Amount) desc) as Sales_Rank
 from Sales
